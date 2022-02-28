@@ -80,55 +80,7 @@
             </form>
         </div>
     </section>
-    <script>
-        var modal = document.getElementsByClassName('signup_section');
-        var Iname = document.getElementById('name');
-        var pw = document.getElementById('pw');
-        let personData = [];
-        var storedData = localStorage.getItem('Data'); 
-        // console.log(storedData)
-        personData = [...(JSON.parse(storedData))];
-
-console.log(personData);
-
-function store() {
-    var storedData = localStorage.getItem('Data'); 
-    let obj = {
-        uname: Iname.value,
-        password: pw.value,
-    }
-    personData.push(obj);
-
-    // console.log(personData);
-    let jsonObj = JSON.stringify(personData)
-
-    localStorage.setItem('Data', jsonObj);
-}
-        function check() {
-
-            // stored data from the register-form
-            var storedData = localStorage.getItem('Data'); 
-
-            // entered data from the login-form
-            var userName = document.getElementById('username');
-            var userPw = document.getElementById('userpw');
-
-            console.log(storedData);
-            // check if stored data from register-form is equal to data from login form
-            // if (userName.value == storedName && userPw.value == storedPw) {
-            //     alert('You are loged in.');
-            // } else {
-            //     alert('ERROR.');
-            // }
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
